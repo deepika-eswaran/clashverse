@@ -1,0 +1,180 @@
+﻿.trump-slot {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trump-slot__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.trump-slot__player {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.trump-slot--active .trump-slot__player {
+  color: var(--accent-ranger-cyan);
+}
+
+.trump-slot--winner .trump-slot__player {
+  color: var(--accent-gold);
+}
+
+.trump-slot__count {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.trump-card {
+  background-color: var(--bg-surface);
+  border: 2px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.trump-slot--active .trump-card {
+  border-color: var(--accent-ranger-cyan);
+  box-shadow: 0 0 22px var(--accent-ranger-glow);
+}
+
+.trump-slot--winner .trump-card {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 28px var(--accent-gold-glow);
+  transform: translateY(-4px);
+}
+
+.trump-card--legendary {
+  border-color: var(--accent-gold);
+}
+
+.trump-card--epic {
+  border-color: var(--accent-ranger-purple);
+}
+
+.trump-card--rare {
+  border-color: var(--accent-ranger-cyan);
+}
+
+.trump-card--back,
+.trump-card--eliminated {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--bg-charcoal),
+    var(--bg-charcoal) 12px,
+    #151924 12px,
+    #151924 24px
+  );
+}
+
+.trump-card__back-logo {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  color: var(--metallic-silver);
+}
+
+.trump-card__back-sub {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.trump-card__out-text {
+  font-family: var(--font-display);
+  color: var(--accent-wwe-red);
+  letter-spacing: 0.12em;
+}
+
+.trump-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.trump-card__rarity {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background-color: var(--bg-charcoal);
+  color: var(--accent-gold);
+  border: 1px solid var(--border-subtle);
+}
+
+.trump-card__emoji {
+  font-size: 1.8rem;
+}
+
+.trump-card__name {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+}
+
+.trump-card__title {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+.trump-card__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: auto;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-charcoal);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  font-weight: 700;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.stat-row--clickable {
+  cursor: pointer;
+}
+
+.stat-row--clickable:hover {
+  background-color: rgba(0, 229, 255, 0.14);
+  border-color: var(--accent-ranger-cyan);
+}
+
+.stat-row--selected {
+  background-color: rgba(245, 185, 66, 0.2);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.stat-row__label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stat-row__value {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+}

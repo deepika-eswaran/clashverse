@@ -1,0 +1,55 @@
+.share-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.share-box__label {
+  font-size: 0.9rem;
+  color: var(--metallic-silver);
+  font-weight: 600;
+}
+
+.share-box__row {
+  display: flex;
+  gap: 10px;
+}
+
+.roster-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.roster-slot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-charcoal);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.roster-slot--ready {
+  border-color: var(--accent-ranger-green);
+  color: var(--text-primary);
+}
+
+.host-tag {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  color: var(--accent-gold);
+}
+
+.roster-slot__who {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lobby-card > .cv-btn {
+  margin-top: 18px;
+}

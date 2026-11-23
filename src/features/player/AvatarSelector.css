@@ -1,0 +1,45 @@
+﻿.avatar-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.avatar-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 8px;
+  background-color: var(--bg-charcoal);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), transform var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.avatar-option:hover {
+  background-color: var(--bg-surface-hover);
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+
+.avatar-option--selected {
+  background-color: var(--bg-surface-hover);
+  border-color: var(--option-accent);
+  color: var(--text-primary);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--option-accent) 30%, transparent);
+}
+
+.avatar-option__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .avatar-selector {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
